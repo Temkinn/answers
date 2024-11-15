@@ -14,28 +14,27 @@ function App() {
 
   function send(){
     const id = document.querySelector('.name').value
-    const contact = document.querySelector('.contact').value
+    // const contact = document.querySelector('.contact').value
     const question = document.querySelector('.question').value
 
     let done = 0
     if(name != ""){
       done++
     }
-    if(contact != ""){
-      done++
-    }
+    // if(contact != ""){
+    //   done++
+    // }
     if(question != ""){
       done++
     }
 
-    if(done == 3){
+    if(done == 2){
       // tg.sendData(JSON.stringify({
       //   // chat_id: '1768792009',
       //   text: `Имя: ${name}\nКонтакт: ${contact}\nВопрос: ${question}`
       // }))
       tg.sendData(JSON.stringify({
         id: id,
-        contact: contact,
         question: question,
       }))
     } else {
