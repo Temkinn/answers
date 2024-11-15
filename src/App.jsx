@@ -33,7 +33,7 @@ function App() {
       //   // chat_id: '1768792009',
       //   text: `Имя: ${name}\nКонтакт: ${contact}\nВопрос: ${question}`
       // }))
-      tg.sendData(`${id} ${answer}`)
+      tg.sendData(`answer#${id} ${answer}`)
     } else {
       setOut("Все поля должны быть заполнены!")
     }
