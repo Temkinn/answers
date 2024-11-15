@@ -15,16 +15,16 @@ function App() {
   function send(){
     const id = document.querySelector('.name').value
     // const contact = document.querySelector('.contact').value
-    const question = document.querySelector('.question').value
+    const answer = document.querySelector('.question').value
 
     let done = 0
-    if(name != ""){
+    if(id != ""){
       done++
     }
     // if(contact != ""){
     //   done++
     // }
-    if(question != ""){
+    if(answer != ""){
       done++
     }
 
@@ -33,10 +33,7 @@ function App() {
       //   // chat_id: '1768792009',
       //   text: `Имя: ${name}\nКонтакт: ${contact}\nВопрос: ${question}`
       // }))
-      tg.sendData(JSON.stringify({
-        id: id,
-        question: question,
-      }))
+      tg.sendData(answer)
     } else {
       setOut("Все поля должны быть заполнены!")
     }
